@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Senior</title>
+    <script src="password.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2034/2034786.png" type="image/icon type">
+</head>
+<body>
+    <h1 class="text-4xl text-center m-10">Find Your Senior &#127754;</h1>
+    <div class="flex items-center justify-center m-10">
+        <button  class="bg-neutral-300 rounded p-3" onclick="clicket()">click to get clue!</button>
+    </div>
+    <h1 id="clue" class="m-10" style="display: none;">
+        00110000 00110001 00110001 00110000 00110001 00110001 00110001 00110000 00100000 00110000 00110001 00110001 00110001 00110000 00110001 00110001 00110000 00100000 00110000 00110001 00110001 00110001 00110000 00110001 00110001 00110000 00100000 00110000 00110001 00110001 00110000 00110001 00110000 00110001 00110001 00100000 00110000 00110001 00110001 00110000 00110001 00110000 00110000 00110000 00100000 00110000 00110001 00110001 00110000 00110000 00110000 00110000 00110001 00100000 00110000 00110001 00110001 00110000 00110001 00110000 00110001 00110000 00100000 00110000 00110001 00110001 00110001 00110000 00110000 00110000 00110000 00100000 00110000 00110001 00110001 00110001 00110000 00110001 00110001 00110001 00100000 00110000 00110001 00110001 00110000 00110001 00110001 00110001 00110001 00100000 00110000 00110001 00110001 00110000 00110001 00110001 00110000 00110000 00100000 00110000 00110001 00110001 00110001 00110001 00110000 00110000 00110001 00100000 00110000 00110001 00110000 00110000 00110000 00110000 00110000 00110001
+    </h1>
+    <div id="cluemore" class="flex items-center justify-center" style="display: none;">
+        <h1 class="text-center text-xl">need help?</h1>
+        <div class="flex items-center justify-center my-2">
+            <button class="bg-neutral-300 rounded p-1"><a href="https://cryptii.com/" target="_blank" class="text-center">link1</a></button>
+        </div>
+        <div class="flex items-center justify-center my-2">
+            <button class="bg-neutral-300 rounded p-1">
+                <a href="https://www.rapidtables.com/convert/number/ascii-to-binary.html" target="_blank" class="text-center">link2</a>
+            </button>
+        </div>
+    </div>
+
+        <div class="flex items-center justify-center">
+            <div class="grid grid-cols-1">
+                <label class="text-xl text-center">Enter Result to get your Senior contact</label><br>
+                <input id="pass" class="appearance-none border-2 rounded w-96 py-1 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono" id="username" type="text" autocomplete="off" autofocus />
+                <div class="flex items-center justify-center">
+                    <button onclick="submitting()" id="sub" class="bg-neutral-300 m-3 rounded w-24 " type="submit">submit</button>
+                </div>
+            </div>
+        </div>
+    <h1 id="text"></h1>
+    <div class="">May The Force Be with You!</div>
+</body>
+</html>
+<script>
+    function clicket(){
+        if( document.getElementById('clue').style.display === "none"){
+            document.getElementById('clue').style.display = "block";
+            document.getElementById('cluemore').style.display = "block";
+        }else{
+            document.getElementById('clue').style.display = "none";
+            document.getElementById('cluemore').style.display = "none";
+        }
+        
+    }
+    var input = document.getElementById("pass");
+    input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("sub").click();
+    }
+    });
+    
+</script>
